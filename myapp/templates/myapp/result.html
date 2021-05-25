@@ -2,11 +2,33 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Web scraper</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   </head>
   <body>
+
+
+<table class="table  table-dark">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Link</th>
+
+    </tr>
+  </thead>
+  <tbody>
     {% for link in data %}
-     {{link.name}}-->{{link.address}}<br>
+    <tr>
+      <td>{{link.id}}</td>
+      <td><h3>{{link.name}}</h3></td>
+      <td><h4>{{link.address}}</h4></td>
+    </tr>
     {% endfor %}
+
+  </tbody>
+</table>
   </body>
 </html>
